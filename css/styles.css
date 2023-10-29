@@ -643,7 +643,8 @@ html.md-mobile .site-top.is-gallery .nav-button {
     height: auto;
     width: 340px;
     z-index: 200;
-    background: #031D41;
+    /*background: #031D41;*/
+    background-color: #050403;
     padding-top: 112px;
     transform: translate3d(100%, 0, 0);
     transition: transform .3s ease;
@@ -708,12 +709,14 @@ body.nav-open .nav-primary-hld {
 
 .nav-primary>li>a.active,
 .nav-primary>li>span.active {
-    background: #02142E
+    /*background: #02142E*/
+    background-color: #462516;
 }
 
 .nav-primary>li>a:hover,
 .nav-primary>li>span:hover {
-    background: rgba(0, 145, 215, .8)
+    /*background: rgba(0, 145, 215, .8)*/
+    background-color: rgba(68, 43, 28, 1);
 }
 
 .nav-primary>li.has-subnodes>span span {
