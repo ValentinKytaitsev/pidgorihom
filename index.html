@@ -73,12 +73,12 @@
                 <li class=" "> <a class=" " href="/ru/kontakt-page-97474"> <span>Контакт</span> </a> </li>
             </ul>
             <ul class="social-hld social-hld--side">
-                <li> <a class="social-hld__link social-hld__link--fb" href="/"
-                        title="Facebook" target="_blank"><img src="img/icons/facebook.svg" alt="facebook" class="facebook"></a> </li>
-                <li> <a class="social-hld__link social-hld__link--ta" href="/"
-                        title="TripAdvisor" target="_blank"><img src="img/icons/x.svg" alt="x"></a> </li>
-                <li> <a class="social-hld__link social-hld__link--ig" href="/"
-                        title="Instagram" target="_blank"><img src="img/icons/instagram.svg" alt="instagram" class="instagram"></a> </li>
+                <li> <a class="social-hld__link social-hld__link--fb" href="/" title="Facebook" target="_blank"><img
+                            src="img/icons/facebook.svg" alt="facebook" class="facebook"></a> </li>
+                <li> <a class="social-hld__link social-hld__link--ta" href="/" title="TripAdvisor" target="_blank"><img
+                            src="img/icons/x.svg" alt="x"></a> </li>
+                <li> <a class="social-hld__link social-hld__link--ig" href="/" title="Instagram" target="_blank"><img
+                            src="img/icons/instagram.svg" alt="instagram" class="instagram"></a> </li>
             </ul>
         </div>
         <div class="site-overlay js-mobile-trigger"></div>
@@ -109,13 +109,13 @@
                     <li>
                         <a href="/" class="menu_circle_item js-scrollify-to" data-scrollify-to-name="big-hall">
                             <div class="menu_circle_item__bg"></div>
-                            <span>великий<br>зал</span>
+                            <span>великий зал</span>
                         </a>
                     </li>
                     <li>
                         <a href="/" class="menu_circle_item js-scrollify-to" data-scrollify-to-name="small-hall">
                             <div class="menu_circle_item__bg"></div>
-                            <span>малий<br>зал</span>
+                            <span>малий зал</span>
                         </a>
                     </li>
                     <li><a href="/" class="menu_circle_item js-scrollify-to" data-scrollify-to-name="contacts">
@@ -373,7 +373,21 @@
                 slidesToScroll: 1,
 
                 prevArrow: 'button.carousel_prev',
-                nextArrow: 'button.carousel_next'
+                nextArrow: 'button.carousel_next',
+                responsive: [
+                    {
+                        breakpoint: 1150,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }
+                ]
             });
         });
         // enable fancybox
@@ -382,13 +396,11 @@
         });
 
 
-
+        // sticky header
         // When the user scrolls the page, execute myFunction
         window.onscroll = function () { myFunction() };
-
         // Get the header
         var header = document.getElementById("myHeader");
-
         // Get the offset position of the navbar
         var sticky = header.offsetTop;
 
