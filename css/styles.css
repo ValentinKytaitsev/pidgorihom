@@ -16,7 +16,7 @@ body {
 
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 100px;
     background-size: cover;
 }
@@ -30,6 +30,20 @@ section {
 
 .big-hall {
     background-image: url(../img/bg_big-hall.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.small-hall {
+    background-image: url(../img/bg_small-hall.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.house {
+    background-image: url(../img/bg_house.jpg);
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -141,11 +155,11 @@ header.sticky .small_logo {
 }
 
 .social li {
-    transition: transform 0.7s ease;
+    transition: transform 0.5s ease;
 }
 
 .social li:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transform-origin: center;
 }
 
@@ -405,7 +419,11 @@ footer .arrow_down img {
 /* circle pagination END */
 
 /* carousel START */
-.big-hall .carousel img {
+/*.big-hall .carousel img {
+    height: 230px;
+}*/
+
+.carousel img {
     height: 230px;
 }
 
@@ -898,7 +916,12 @@ html.lt-ie10 .nav-primary>li ul li {
     padding-right: 10px;
     padding-bottom: 5px;
     padding-left: 10px;
-    cursor: pointer
+    cursor: pointer;
+}
+
+.social-hld li .social-hld__link img {
+    width: 25px;
+    height: auto;
 }
 
 .social-hld li .social-hld__link i {
