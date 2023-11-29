@@ -71,21 +71,27 @@ section {
     padding-top: 100px;
 }
 
+.index .section_content {
+    justify-content: center;
+    padding-top: unset;
+}
 
 
+/* header START */
 header {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, .7);
     /*outline: 1px solid red;*/
 }
-
+/*
 .sticky {
     position: fixed;
     top: 0;
     width: 100%
-}
+}*/
 
 header .container {
     display: flex;
@@ -142,9 +148,6 @@ header.sticky .small_logo {
     opacity: 1;
 }
 
-
-
-
 .social {
     /*display: flex;*/
     /*margin-left: auto;*/
@@ -174,8 +177,7 @@ header.sticky .small_logo {
     fill: #fff;
     /*color: #fff;*/
 }
-
-
+/* header END */
 
 
 /* circle menu on index section  START */
@@ -314,6 +316,7 @@ footer .container {
     height: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer .time,
@@ -333,6 +336,9 @@ footer .phone img {
 footer .arrow_down {
     padding-top: 10px;
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    margin-left: -22px;
 }
 
 footer .arrow_down img {
@@ -495,8 +501,8 @@ p.img-slide-text {
 
 .big_logo {
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding-top: unset;
+    padding-bottom: 50px;
 }
 
 .big_logo img {}
@@ -520,11 +526,9 @@ p.img-slide-text {
     text-transform: uppercase;
 }
 
-
-
 .section_text {
     margin: 0 auto;
-    width: 800px;
+    max-width: 800px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -540,9 +544,9 @@ p.img-slide-text {
     padding-bottom: 1.5rem;
 }
 
-
-
-
+iframe {
+    margin: 50px 0;
+}
 
 /* content END */
 
@@ -1162,6 +1166,26 @@ html.lt-ie10 .nav-primary>li ul li {
 
 /* animations END */
 
+
+
+/* pages */
+.price-bath,
+.price-house {
+    background-image: url(../img/bg_big-hall.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.price-bath .section_text {
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
 /* media quaires */
 
 /* Small devices (landscape phones, less than 768px)*/
@@ -1267,6 +1291,16 @@ html.lt-ie10 .nav-primary>li ul li {
 
     .section_text {
         width: auto;
+        flex: 0;
+    }
+
+    .section_text .social {
+        margin-right: 0;
+    }
+
+    .section_content {
+        /*justify-content: center;
+        padding-top: 0;*/
     }
 
 
@@ -1283,19 +1317,13 @@ html.lt-ie10 .nav-primary>li ul li {
         width: 87%;
     }
 
-
-
     /* hide pagination right */
     .pagination {
         display: none;
     }
 
-
     .section_content {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        flex: 1;
         padding-top: 0;
     }
 
@@ -1311,7 +1339,6 @@ html.lt-ie10 .nav-primary>li ul li {
         font-size: 1.1rem;
     }
 
-
     .section_title {
         padding-bottom: 1.5rem;
     }
@@ -1320,101 +1347,16 @@ html.lt-ie10 .nav-primary>li ul li {
         flex: 0;
     }
 
-
-
     .carousel_container {
         position: relative;
         margin-top: unset;
         padding: 1.5rem 0;
     }
-
-
-
-
-
-
-    /*
-
-
-    .big_logo {
-        padding-bottom: 100px;
-    }
-
-    .circle_items {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu_circle_item {
-        position: relative;
-        width: 300px;
-        height: 3rem;
-        margin: 10px 0;
-        border-radius: 13px;
-        color: #000;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border: 1px solid rgba(255, 255, 255, .4);
-    }
-
-    .menu_circle_item .ripple-thingy:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: auto;
-        height: auto;
-        border: 1px solid rgba(255, 255, 255, .5);
-        border-radius: 13px;
-        animation: RippleOuter 2s ease forwards 0s
-    }
-    
-    .menu_circle_item .ripple-thingy:after {
-        content: "";
-        position: absolute;
-        top: -1px;
-        right: -1px;
-        bottom: -1px;
-        left: -1px;
-        width: auto;
-        height: auto;
-        border: 1px solid rgba(255, 255, 255, .5);
-        border-radius: 13px;
-        animation: RippleInner .5s ease forwards 0s;
-        opacity: 0
-    }
-
-    .menu_circle_item__bg {
-        border-radius: 13px;
-    }
-
-    .menu_circle_item span {
-        max-width: unset;
-    }
-
-    .section_title {
-        font-size: 2rem;
-    }
-
-    .section_text {
-        width: auto;
-    }
-
-*/
 }
 
 @media only screen and (max-width: 490px) {
 
     /* header */
-
     header .container {}
 
     .container {
@@ -1440,15 +1382,9 @@ html.lt-ie10 .nav-primary>li ul li {
         display: none;
     }
 
-
-
-
     .social {
         display: none;
     }
-
-
-
 
     .nav-button__label {
         font-size: 0.8rem;
@@ -1463,16 +1399,13 @@ html.lt-ie10 .nav-primary>li ul li {
         display: none;
     }
 
-
-
     .contacts .social {
         display: flex;
         justify-content: center;
         margin-right: 0;
     }
 
-
-
-
-
+    iframe {
+        margin: 0;
+    }
 }
